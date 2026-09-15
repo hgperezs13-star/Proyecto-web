@@ -1,0 +1,223 @@
+body {
+    background-color: white;
+    color: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding-top: 90px;
+}
+
+h1 {
+    color: #000;
+}
+h2 {
+font-family: initial;
+margin:1rem;
+padding:2rem;
+font-style:oblique;
+}
+
+/*Estilos de letras y diseños*/
+
+.subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: rgb(44, 42, 42);
+    margin-top: 1.5rem; 
+    margin-bottom: 3.5rem;
+}
+
+.divider {
+    border-style: solid;
+    color: rgb(55, 9, 9);
+    margin: 0 3rem;
+}
+/* Tarjetas y apartados*/
+.main-content{
+display: flex;
+justify-content: center;
+align-items: stretch;
+gap: 2rem;
+max-width: 1100px;
+margin:3rem auto;
+padding: 0 1.5rem;
+}
+.preview-box{
+flex: 1.2;
+min-width: 280px;
+background-color: #eae2e2;
+border: 2px solid #eae2e2;
+border-radius: 8px;
+box-shadow:0 7px 8px 0 rgba(0, 0, 0, 0.19), 0 7px 10px 0 rgba(0, 0, 0, 0.19);
+padding: 2.5rem 1.5rem;
+text-align: center;
+}
+.preview-box h3 {
+margin-top: 0;
+font-size:1.8rem;
+color: rgb(55, 9, 9);
+}
+.preview-box p {
+font-size: 1.1rem;
+color:#555;
+margin-top:0.5rem;
+}
+
+.cards-container{
+flex:0.8;
+display:flex;
+flex-direction: column;
+gap:1.5rem;
+}
+.card {
+    border: 2px solid;
+    border-radius: 8px;
+    border-color: rgb(55, 9, 9);
+    box-shadow: 0 6px 9px 0 rgba(5, 5, 5, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(55, 9, 9);
+   
+    margin: 10rem 1rem;
+    padding: 1.8rem 1rem;
+    font-size: 1.4rem;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+
+    color: rgb(198, 187, 187);
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 1;
+
+    transition: transform 0.3s ease !important;
+}
+.card:hover
+{
+cursor:pointer;
+transform: scale(1.1);
+color: #000;
+background-color: #ffffff;
+border-color:#000;
+}
+
+.box {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 2rem;
+    margin-top:1rem;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    font-family: monospace;
+}
+.box p
+{
+font-family:initial;
+color:rgb(212, 212, 202);
+margin:0.5rem;
+font-size:1rem;
+}
+.contact-container{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 3rem;
+margin-top:2rem;
+flex-wrap: wrap;
+}
+
+.contact-item{
+font-size:2rem;
+padding:1rem;
+color:azure;
+text-decoration: none;
+}
+
+.contact-item:hover{
+    transform: scale(1.5);
+    color:rgb(78, 111, 111);
+    font-family:initial;
+}
+
+.nav 
+{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+.nav__container {
+    background-color: #000000;
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+.nav__list {
+    list-style: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    
+   
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/*Menu*/
+
+#menu-check {
+    display: none;
+}
+
+.menu-btn { 
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.menu-toggle input:checked ~ .menu-btn span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle input:checked ~ .menu-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle input:checked ~ .menu-btn span:nth-child(3) { 
+    transform: translateY(-9px) rotate(-45deg);
+}
+.nav__container:has(#menu-check:checked) .nav__list {
+    opacity: 1;
+    pointer-events: auto;
+}
