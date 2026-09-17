@@ -12,9 +12,9 @@
 </head>
 
 <body>
+
     <nav class="nav">
         <div class="nav__container">
-
             <div class="menu-toggle">
                 <input type="checkbox" id="menu-check">
                 <label for="menu-check" class="menu-btn">
@@ -24,61 +24,98 @@
                 </label>
             </div>
 
+            <h1 class="nav__title">Proyecto</h1>
+
+            <a href="#formulario-pedidos" class="nav-shortcut" title="Realizar pedido">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </a>
+
             <ul class="nav__list">
                 <li class="nav__item"><a href="#" class="nav__link">Inicio</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Galeria</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Reserva</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Sobre nosotros</a></li>
+                <li class="nav__item"><a href="tarjetas/contenido.html" class="nav__link">Contenido</a></li>
+                <li class="nav__item"><a href="tarjetas/reserva.html" class="nav__link">Reserva</a></li>
+                <li class="nav__item"><a href="#seccion-contactos" class="nav__link">Sobre nosotros</a></li>
             </ul>
         </div>
     </nav>
 
+
     <h1>PROYECTO WEB</h1>
-    <p class="subtitle">Bienvenido a nuestra pagina oficial, donde encontraras todos nuestros productos y contactos.
-    </p>
+    <p class="subtitle">Bienvenido a nuestra página oficial, donde encontrarás todos nuestros productos y contactos.</p>
     <hr class="divider">
 
+    <section class="cards-section">
+        <div class="cards-container">
+            <a href="tarjetas/contenido.html" class="card-link" style="text-decoration: none;">
+                <div class="card card1">Contenido</div>
+            </a>
+            <a href="tarjetas/reserva.html" class="card-link" style="text-decoration: none;">
+                <div class="card card2">Reserva ya</div>
+            </a>
+            <a href="tarjetas/sucursales.html" class="card-link" style="text-decoration: none;">
+                <div class="card card3">Sucursales</div>
+            </a>
+            <a href="tarjetas/valoranos.html" class="card-link" style="text-decoration: none;">
+                <div class="card card4">Valoranos</div>
+            </a>
+        </div>
+    </section>
+    
     <div class="main-content">
         <aside class="preview-box">
             <h3>Novedades</h3>
             <p>Ingresos de productos y más.</p>
             <hr>
         </aside>
-        <div class="cards-container>">
 
-        <div class="card card1">Contenido</div>
-        <div class="card card2">Reserva ya</div>
-        <div class="card card3">Sucursales</div>
-        <div class="card card4">Valoranos</div>
-    
-        </div>
     </div>
- 
-    <footer>
-        <div class="box box1"> <p style="font-weight: bold; font-family: 'Times New Roman', Times, serif"> En caso de consultas y dudas <br> porfavor dirigase a nuestros contactos, lo valoraremos mucho.</p></div>
+
+
+    <section id="formulario-pedidos" class="order-section">
+        <h2>Realiza tu pedido</h2>
+        <form class="order-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+
+            <label for="producto">Tu producto:</label>
+            <select id="producto" name="producto">
+                <option value="opcion1">Producto 1</option>
+                <option value="opcion2">Producto 2</option>
+            </select>
+
+            <label for="mensaje">Detalles del pedido:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Detallanos tu pedido..." rows="4"></textarea>
+
+            <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+    </section>
+
+
+    <footer id="seccion-contactos">
         <section class="box box1">
+            <p style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">
+                En caso de consultas y dudas<br>por favor diríjase a nuestros contactos, lo valoraremos mucho.
+            </p>
+
             <h2>Contactanos</h2>
-            <div class="contact-container"></div>
-            <a href="https://wa.me/3454164791" target="_blank" class="contact-item">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span></span>
-            </a>
 
-            <a href="https://instagram.com/perezzhernann" target="_blank" class="contact-item">
-                <i class="fa-brands fa-instagram"></i>
-                <span></span>
-            </a>
 
-            <a href="mailto:hgperezs13@gmail.com" class="contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <span></span>
-            </a>
+            <div class="contact-container">
+                <a href="https://wa.me/3454164791" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="https://instagram.com/perezzhernann" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="mailto:hgperezs13@gmail.com" class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
             </div>
             <hr>
         </section>
     </footer>
-
-
 
     <script src="script.js"></script>
 </body>
